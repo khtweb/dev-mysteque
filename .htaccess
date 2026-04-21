@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Staff only"
+AuthGroupFile /dev/null
+AuthUserFile "/home/users/1/punyu.jp-khtaok/web/roirom-mysteque/.htpasswd"
+require valid-user
