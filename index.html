@@ -159,7 +159,7 @@ $(function(){
 <section id="cptn" class="cptn">
     <div class="inr" data-delighter>
         <div class="captxt">
-        今年5月7日にデビューした、本多大夢と浜川路己によるアイドルデュオROIROM（ロイロム）の、デビュー後初、アリーナでの単独ライブ！
+        今年5月7日にデビュー<i id="debut"></i>、本多大夢と浜川路己によるアイドルデュオROIROM（ロイロム）の、デビュー後初、アリーナでの単独ライブ！
 2025年5月の結成から創り上げてきた彼らの集大成を、横浜アリーナの舞台で披露します。
 この日、この場所でしか体験できない、特別な夜にご期待ください。
         </div>
@@ -448,8 +448,18 @@ window.onclick = function (event) {
             });
         });
     });
+
+const target = new Date('2026-05-07'); 
+
+const today = new Date();
+today.setHours(0,0,0,0); // 今日の0時にそろえる
+target.setHours(0,0,0,0);
+
+document.getElementById('debut').textContent =
+  today >= target ? 'した' : 'する';
 </script>
    
+
 
 </body>
 </html>
